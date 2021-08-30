@@ -1,6 +1,7 @@
-//calls to api
+// calls to api
 // horoscope url = POST: https://aztro.sameerkumar.website
 // documentation https://github.com/sameerkumar18/aztro/blob/master/docs/source/index.rst
+// 'https://aztro.sameerkumar.website/?sign=aries&day=today',
 
 // ticketmaster examples
 // Get a list of all events in the United States https://app.ticketmaster.com/discovery/v2/events.json?countryCode=US&apikey=aAqAzVKHrKPYin0QcaOkbVqByNmRIWAh
