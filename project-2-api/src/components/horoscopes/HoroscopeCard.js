@@ -1,31 +1,46 @@
-import React from "react";
-
+import React from 'react'
 //import { getSingleHoroscope } from "../api/api";
 
 const HoroscopeCard = () => {
+  const [horoScope, setHoroscope] = React.useState([])
+
   //page will include
   // horoscope stats
   // links to horoscope index (shows all 12)
   // 2nd API data = best thing to do because of (stats data search)
-  const sign = "leo";
-  const day = "today";
+  const sign = 'cancer'
+  const day = 'today'
 
-  const request = require("request");
+  const request = require('request')
 
   const options = {
     url: `https://aztro.sameerkumar.website/?sign=${sign}&day=${day}`,
-    method: "POST"
-  };
-
-  function callback(error, response, body) {
-    if (!error && response.statusCode === 200) {
-      console.log(body);
-    }
+    method: 'POST',
   }
 
-  request(options, callback);
+  React.useEffect(() => {
+    function callback(error, response, body) {
+      if (!error && response.statusCode === 200) {
+        const horoscopeBody = JSON.parse(body)
+        console.log(body)
+        console.log(horoscopeBody.date_range)
+        setHoroscope(horoscopeBody)
+      }
+    }
 
-  return <p>todays "star sign" info</p>;
-};
+    request(options, callback)
+  }, [])
 
-export default HoroscopeCard;
+  return (
+    <>
+      <h1>Your horoscope</h1>
+      <p>{horoScope.description}</p>
+      <h2>Your lucky colour</h2>
+      <p>{horoScope.color}</p>
+      <h2>Your lucky time</h2>
+      <p>{horoScope.lucky_time}</p>
+    </>
+  )
+}
+
+export default HoroscopeCard
