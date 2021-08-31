@@ -1,22 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-//import { getSingleHoroscope } from "../api/api";
-
-const HoroscopeCard = () => {
+const HoroscopeDaily = () => {
   const [horoScope, setHoroscope] = React.useState([]);
-  const [info, setinfo] = React.useState(["leo"]);
+  const [info, setinfo] = React.useState([]);
 
-  //page will include
-  // horoscope stats
-  // links to horoscope index (shows all 12)
-  // 2nd API data = best thing to do because of (stats data search)
-
-  //const sign = "cancer";
   let day = "today";
 
   React.useEffect(() => {
-    const json = localStorage.getItem("userInfo");
+    const json = localStorage.getItem("value");
     const savedInfo = JSON.parse(json);
     console.log(savedInfo);
     if (savedInfo) {
@@ -31,7 +23,7 @@ const HoroscopeCard = () => {
   const request = require("request");
 
   const options = {
-    url: `https://aztro.sameerkumar.website/?sign=${info.starsign}&day=${day}`,
+    url: `https://aztro.sameerkumar.website/?sign=${info}&day=${day}`,
     method: "POST"
   };
 
@@ -41,7 +33,7 @@ const HoroscopeCard = () => {
         const horoscopeBody = JSON.parse(body);
         console.log(body);
         console.log(horoscopeBody.date_range);
-        console.log(info.starsign);
+        console.log(info);
         setHoroscope(horoscopeBody);
       }
     }
@@ -49,17 +41,11 @@ const HoroscopeCard = () => {
     request(options, callback);
   }, [info]);
 
-  if (options === 400) {
-    return <p>Loading...</p>;
-  }
-
   return (
     <>
       {info ? (
         <>
-          <h1>
-            Hi {info.name}! This is your reading for {day}
-          </h1>
+          <h1>Your reading for {day}</h1>
           <p>{horoScope.description}</p>
           <h2>Your lucky colour</h2>
           <p>{horoScope.color}</p>
@@ -71,11 +57,8 @@ const HoroscopeCard = () => {
           <p>{horoScope.mood}</p>
           <h2>Your lucky number</h2>
           <p>{horoScope.lucky_number}</p>
-          <Link to={"/user-info"} className="button" onClick={handleClick}>
-            <p>new horoscope</p>
-          </Link>{" "}
           <Link to={"/all"} className="button" onClick={handleClick}>
-            <p>All Signs</p>
+            <p>Back</p>
           </Link>{" "}
         </>
       ) : (
@@ -85,4 +68,4 @@ const HoroscopeCard = () => {
   );
 };
 
-export default HoroscopeCard;
+export default HoroscopeDaily;
