@@ -1,4 +1,5 @@
-import React from 'react'
+import React from "react";
+import { Link } from "react-router-dom";
 
 //import { getSingleHoroscope } from "../api/api";
 
@@ -12,7 +13,7 @@ const HoroscopeCard = () => {
   // 2nd API data = best thing to do because of (stats data search)
 
   //const sign = "cancer";
-  const day = 'today'
+  let day = "today";
 
   React.useEffect(() => {
     const json = localStorage.getItem('userInfo')
@@ -23,7 +24,12 @@ const HoroscopeCard = () => {
     }
   }, [])
 
-  const request = require('request')
+
+  const handleClick = () => {
+    localStorage.removeItem("userInfo");
+  };
+
+  const request = require("request");
 
   const options = {
     url: `https://aztro.sameerkumar.website/?sign=${info.starsign}&day=${day}`,
@@ -42,22 +48,42 @@ const HoroscopeCard = () => {
       }
     }
 
-    request(options, callback)
-    console.log(options.url)
-  }, [info])
 
-  //if (options === null) {
-  //  return <p>Loading...</p>
-  //}
+    request(options, callback);
+  }, [info]);
+
+  if (options === 400) {
+    return <p>Loading...</p>;
+  }
 
   return (
     <>
-      <h1>Your horoscope</h1>
-      <p>{horoScope.description}</p>
-      <h2>Your lucky colour</h2>
-      <p>{horoScope.color}</p>
-      <h2>Your lucky time</h2>
-      <p>{horoScope.lucky_time}</p>
+      {info ? (
+        <>
+          <h1>
+            Hi {info.name}! This is your reading for {day}
+          </h1>
+          <p>{horoScope.description}</p>
+          <h2>Your lucky colour</h2>
+          <p>{horoScope.color}</p>
+          <h2>Your lucky time</h2>
+          <p>{horoScope.lucky_time}</p>
+          <h2>Your compatible Star Sign</h2>
+          <p>{horoScope.compatibility}</p>
+          <h2>Your mood</h2>
+          <p>{horoScope.mood}</p>
+          <h2>Your lucky number</h2>
+          <p>{horoScope.lucky_number}</p>
+          <Link to={"/user-info"} className="button" onClick={handleClick}>
+            <p>new horoscope</p>
+          </Link>{" "}
+          <Link to={"/all"} className="button" onClick={handleClick}>
+            <p>All Signs</p>
+          </Link>{" "}
+        </>
+      ) : (
+        <p>Loading</p>
+      )}
     </>
   )
 }
