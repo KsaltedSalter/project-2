@@ -4,6 +4,7 @@ import NavBar from "./components/common/NavBar";
 import HoroscopeCard from "./components/horoscopes/HoroscopeCard";
 import HoroscopeIndex from "./components/horoscopes/HoroscopeIndex";
 import UserInfo from "./components/horoscopes/UserInfo";
+import Activities from './components/horoscopes/Activities'
 import HoroscopeDaily from "./components/horoscopes/HoroscopeDaily";
 
 function App() {
@@ -16,9 +17,10 @@ function App() {
         <Route exact path="/today" component={HoroscopeCard} />
         <Route exact path="/all" component={HoroscopeIndex} />
         <Route exact path="/reading" component={HoroscopeDaily} />
+        <Route exact path='/activities' component={Activities} />
       </Switch>
     </BrowserRouter>
-  );
+  )
 }
 
-export default App;
+export default App
