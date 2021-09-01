@@ -1,5 +1,5 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react'
+import { Link } from 'react-router-dom'
 
 //import { getSingleHoroscope } from "../api/api";
 
@@ -13,7 +13,7 @@ const HoroscopeCard = () => {
   // 2nd API data = best thing to do because of (stats data search)
 
   //const sign = "cancer";
-  let day = "today";
+  let day = 'today'
 
   React.useEffect(() => {
     const json = localStorage.getItem('userInfo')
@@ -24,12 +24,12 @@ const HoroscopeCard = () => {
     }
   }, [])
 
-
   const handleClick = () => {
-    localStorage.removeItem("userInfo");
-  };
+    localStorage.removeItem('userInfo')
+    localStorage.removeItem('horoscope')
+  }
 
-  const request = require("request");
+  const request = require('request')
 
   const options = {
     url: `https://aztro.sameerkumar.website/?sign=${info.starsign}&day=${day}`,
@@ -40,7 +40,7 @@ const HoroscopeCard = () => {
     function callback(error, response, body) {
       if (!error && response.statusCode === 200) {
         const horoscopeBody = JSON.parse(body)
-        localStorage.setItem('horoscope', body) //only worthwhile new bit
+        localStorage.setItem('horoscope', body)
         console.log(body)
         console.log(horoscopeBody.date_range)
         console.log(info.starsign)
@@ -48,12 +48,11 @@ const HoroscopeCard = () => {
       }
     }
 
-
-    request(options, callback);
-  }, [info]);
+    request(options, callback)
+  }, [info])
 
   if (options === 400) {
-    return <p>Loading...</p>;
+    return <p>Loading...</p>
   }
 
   return (
@@ -74,12 +73,15 @@ const HoroscopeCard = () => {
           <p>{horoScope.mood}</p>
           <h2>Your lucky number</h2>
           <p>{horoScope.lucky_number}</p>
-          <Link to={"/user-info"} className="button" onClick={handleClick}>
+          <Link to={'/user-info'} className='button' onClick={handleClick}>
             <p>new horoscope</p>
-          </Link>{" "}
-          <Link to={"/all"} className="button" onClick={handleClick}>
+          </Link>{' '}
+          <Link to={'/all'} className='button' onClick={handleClick}>
             <p>All Signs</p>
-          </Link>{" "}
+          </Link>{' '}
+          <Link to={'/activities'} className='button'>
+            <p>News stories for you</p>
+          </Link>{' '}
         </>
       ) : (
         <p>Loading</p>
