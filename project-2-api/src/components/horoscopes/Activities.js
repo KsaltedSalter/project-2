@@ -1,22 +1,30 @@
-import React from "react";
+import React from 'react'
 
 const Activites = () => {
-  const [NEWS, setNEWS] = React.useState([]);
-  const axios = require("axios").default;
-  const json = localStorage.getItem("horoscope");
-  const horoscopeInfo = JSON.parse(json);
-  console.log(horoscopeInfo);
+  const [NEWS, setNEWS] = React.useState([])
+  //wrap axios in button
+  const axios = require('axios').default
+  const json = localStorage.getItem('horoscope')
+  const horoscopeInfo = JSON.parse(json)
+  console.log(horoscopeInfo)
+
+  // useEffect(() => {
+  //   axios.get('ENDPOINT)
+  //     .then(({ data }) => {
+  //       updateState(data.whatever)
+  //     })
+  // }, [])
 
   const options = {
-    method: "GET",
-    url: "https://contextualwebsearch-websearch-v1.p.rapidapi.com/api/search/NewsSearchAPI",
+    method: 'GET',
+    url: 'https://contextualwebsearch-websearch-v1.p.rapidapi.com/api/search/NewsSearchAPI',
     params: {
       q: `${horoscopeInfo.color} ${horoscopeInfo.lucky_number} ${horoscopeInfo.lucky_time} ${horoscopeInfo.mood} `,
-      pageNumber: "1",
-      pageSize: "10",
-      autoCorrect: "true",
-      fromPublishedDate: "null",
-      toPublishedDate: "null"
+      pageNumber: '1',
+      pageSize: '3',
+      autoCorrect: 'true',
+      fromPublishedDate: 'null',
+      toPublishedDate: 'null',
     },
     headers: {
       'x-rapidapi-host': 'contextualwebsearch-websearch-v1.p.rapidapi.com',
@@ -29,23 +37,23 @@ const Activites = () => {
     .then(function (response) {
       //console.log(response.data.value)
 
-      const newsBody = response.data.value[0];
-      console.log(newsBody.title);
+      const newsBody = response.data.value[0]
+      console.log(newsBody.title)
       //console.log(newsBody.image.url);
-      setNEWS(newsBody.title);
+      setNEWS(newsBody.title)
     })
     .catch(function (error) {
-      console.error(error);
-    });
+      console.error(error)
+    })
 
   return (
     <>
-      <p>{NEWS.title}</p>
+      <p>{NEWS}</p>
     </>
-  );
-};
+  )
+}
 
-export default Activites;
+export default Activites
 
 //<img src={NEWS.image.url} alt={NEWS.title}></img>
 //429
