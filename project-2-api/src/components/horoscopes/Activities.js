@@ -19,15 +19,16 @@ const Activites = () => {
       toPublishedDate: "null"
     },
     headers: {
-      "x-rapidapi-host": "contextualwebsearch-websearch-v1.p.rapidapi.com",
-      "x-rapidapi-key": "1e28ca44afmsh25e937d57ed8453p1f7b12jsn376d71df4d10"
-    }
-  };
+      'x-rapidapi-host': 'contextualwebsearch-websearch-v1.p.rapidapi.com',
+      'x-rapidapi-key': '1e28ca44afmsh25e937d57ed8453p1f7b12jsn376d71df4d10',
+    },
+  }
 
   axios
     .request(options)
     .then(function (response) {
       //console.log(response.data.value)
+
       const newsBody = response.data.value[0];
       console.log(newsBody.title);
       //console.log(newsBody.image.url);
