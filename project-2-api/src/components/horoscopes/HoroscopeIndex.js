@@ -25,159 +25,161 @@ const HoroscopeIndex = () => {
   // if we have time
   return (
     <>
-      <div className="columns">
-        <div className="column is-quarter is-vcentered">
-          <div className="is-third">
-            <img src={aries} alt="aries logo" />
-            <div>
-              <input
-                className="button"
-                type="submit"
-                value="aries"
-                onClick={handleClick}
-              />
+      <section className="hero is-fullheight-with-navbar is-light">
+        <div className="columns mt-4">
+          <div className="column is-quarter">
+            <div className="is-third has-text-centered mt-4">
+              <img className="has-text-centered" src={aries} alt="aries logo" />
+              <div>
+                <input
+                  className="button is-link"
+                  type="submit"
+                  value="aries"
+                  onClick={handleClick}
+                />
+              </div>
+            </div>
+
+            <div className="is-third has-text-centered mt-4">
+              <img src={gemini} alt="gemini logo" />
+              <div>
+                <input
+                  className="button is-link"
+                  type="submit"
+                  value="gemini"
+                  onClick={handleClick}
+                />
+              </div>
+            </div>
+
+            <div className="is-third has-text-centered mt-4">
+              <img src={capricorn} alt="capricorn logo" />
+              <div>
+                <input
+                  className="button is-link"
+                  type="submit"
+                  value="capricorn"
+                  onClick={handleClick}
+                />
+              </div>
             </div>
           </div>
 
-          <div className="is-third">
-            <img src={gemini} alt="gemini logo" />
-            <div>
-              <input
-                className="button"
-                type="submit"
-                value="gemini"
-                onClick={handleClick}
-              />
+          <div className="column is-quarter">
+            <div className="is-third has-text-centered mt-4">
+              <img src={taurus} alt="taurus logo" />
+              <div>
+                <input
+                  className="button is-link"
+                  type="submit"
+                  value="taurus"
+                  onClick={handleClick}
+                />
+              </div>
+            </div>
+
+            <div className="is-third has-text-centered mt-4">
+              <img src={leo} alt="leo logo" />
+              <div>
+                <input
+                  className="button is-link"
+                  type="submit"
+                  value="leo"
+                  onClick={handleClick}
+                />
+              </div>
+            </div>
+
+            <div className="is-third has-text-centered mt-4">
+              <img src={libra} alt="libra logo" />
+              <div>
+                <input
+                  className="button is-link"
+                  type="submit"
+                  value="libra"
+                  onClick={handleClick}
+                />
+              </div>
             </div>
           </div>
 
-          <div className="is-third">
-            <img src={capricorn} alt="capricorn logo" />
-            <div>
-              <input
-                className="button"
-                type="submit"
-                value="capricorn"
-                onClick={handleClick}
-              />
+          <div className="column is-quarter">
+            <div className="is-third has-text-centered mt-4">
+              <img src={scorpio} alt="scorpio logo" />
+              <div>
+                <input
+                  className="button is-link"
+                  type="submit"
+                  value="scorpio"
+                  onClick={handleClick}
+                />
+              </div>
+            </div>
+
+            <div className="is-third has-text-centered mt-4">
+              <img src={cancer} alt="cancer logo" />
+              <div>
+                <input
+                  className="button is-link"
+                  type="submit"
+                  value="cancer"
+                  onClick={handleClick}
+                />
+              </div>
+            </div>
+
+            <div className="is-third has-text-centered mt-4">
+              <img src={virgo} alt="virgo logo" />
+              <div>
+                <input
+                  className="button is-link"
+                  type="submit"
+                  value="virgo"
+                  onClick={handleClick}
+                />
+              </div>
+            </div>
+          </div>
+
+          <div className="column is-quarter">
+            <div className="is-third has-text-centered mt-4">
+              <img src={aquarius} alt="aquarius logo" />
+              <div>
+                <input
+                  className="button is-link"
+                  type="submit"
+                  value="aquarius"
+                  onClick={handleClick}
+                />
+              </div>
+            </div>
+
+            <div className="is-third has-text-centered mt-4">
+              <img src={sagittarius} alt="sagittarius logo" />
+              <div>
+                <input
+                  className="button is-link"
+                  type="submit"
+                  value="sagittarius"
+                  onClick={handleClick}
+                />
+              </div>
+            </div>
+
+            <div className="is-third has-text-centered mt-4">
+              <img src={pisces} alt="pisces logo" />
+              <div>
+                <input
+                  className="button is-link"
+                  type="submit"
+                  value="pisces"
+                  onClick={handleClick}
+                />
+              </div>
             </div>
           </div>
         </div>
-
-        <div className="column is-quarter">
-          <div className="is-third">
-            <img src={taurus} alt="taurus logo" />
-            <div>
-              <input
-                className="button"
-                type="submit"
-                value="taurus"
-                onClick={handleClick}
-              />
-            </div>
-          </div>
-
-          <div className="is-third">
-            <img src={leo} alt="leo logo" />
-            <div>
-              <input
-                className="button"
-                type="submit"
-                value="leo"
-                onClick={handleClick}
-              />
-            </div>
-          </div>
-
-          <div className="is-third">
-            <img src={libra} alt="libra logo" />
-            <div>
-              <input
-                className="button"
-                type="submit"
-                value="libra"
-                onClick={handleClick}
-              />
-            </div>
-          </div>
-        </div>
-
-        <div className="column is-quarter">
-          <div className="is-third">
-            <img src={scorpio} alt="scorpio logo" />
-            <div>
-              <input
-                className="button"
-                type="submit"
-                value="scorpio"
-                onClick={handleClick}
-              />
-            </div>
-          </div>
-
-          <div className="is-third">
-            <img src={cancer} alt="cancer logo" />
-            <div>
-              <input
-                className="button"
-                type="submit"
-                value="cancer"
-                onClick={handleClick}
-              />
-            </div>
-          </div>
-
-          <div className="is-third">
-            <img src={virgo} alt="virgo logo" />
-            <div>
-              <input
-                className="button"
-                type="submit"
-                value="virgo"
-                onClick={handleClick}
-              />
-            </div>
-          </div>
-        </div>
-
-        <div className="column is-quarter">
-          <div className="is-third">
-            <img src={aquarius} alt="aquarius logo" />
-            <div>
-              <input
-                className="button"
-                type="submit"
-                value="aquarius"
-                onClick={handleClick}
-              />
-            </div>
-          </div>
-
-          <div className="is-third">
-            <img src={sagittarius} alt="sagittarius logo" />
-            <div>
-              <input
-                className="button"
-                type="submit"
-                value="sagittarius"
-                onClick={handleClick}
-              />
-            </div>
-          </div>
-
-          <div className="is-third">
-            <img src={pisces} alt="pisces logo" />
-            <div>
-              <input
-                className="button"
-                type="submit"
-                value="pisces"
-                onClick={handleClick}
-              />
-            </div>
-          </div>
-        </div>
-      </div>
+      </section>
 
       <div>
         Icons made by{" "}

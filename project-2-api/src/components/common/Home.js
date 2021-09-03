@@ -5,7 +5,7 @@ const Home = () => {
   // wellcome info here
   // button to history push to UserInfo
   return (
-    <div>
+    <div className="is-centered is-fullheight-with-navbar is-light">
       <h1 className="title is-1 has-text-centered has-text-black">
         Daily Horoscopes
       </h1>
@@ -13,9 +13,13 @@ const Home = () => {
         find out your daily reading by clicking below!
       </p>
 
-      <Link to={"/user-info"} className="button">
-        <p>new horoscope</p>
-      </Link>
+      <hr />
+
+      <div className="has-text-centered">
+        <Link to={"/user-info"} className="button is-link">
+          <p>check it out!</p>
+        </Link>
+      </div>
     </div>
   );
 };
