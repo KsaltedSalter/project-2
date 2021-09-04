@@ -16,7 +16,7 @@ const Home = () => {
       <hr />
 
       <div className="has-text-centered">
-        <Link to={"/user-info"} className="button is-link">
+        <Link to={"/user-info"} className="button is-link is-rounded">
           <p>check it out!</p>
         </Link>
       </div>
