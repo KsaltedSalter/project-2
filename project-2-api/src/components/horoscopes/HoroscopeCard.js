@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import aries from "../../img/aries.png";
 import taurus from "../../img/taurus.png";
@@ -103,6 +103,7 @@ const HoroscopeCard = () => {
     }
 
     request(options, callback);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [info]);
 
   return (

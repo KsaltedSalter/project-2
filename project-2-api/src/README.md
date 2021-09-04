@@ -42,7 +42,7 @@ aztro-js - yarn add aztro-js
 
 ## Link to your wireframes – sketches of major views / interfaces in your application:
 
-Image attached (Wirefram.jpg)
+Image attached (Wireframe.jpg)
 
 ---
 
@@ -59,3 +59,4 @@ Image attached (Wirefram.jpg)
 
 - Horoscope API had links for yesterday and tomorrow readings
 - Make code more DRY (HoroscopeDaily.js and HoroscopeCard.js basically using many of the same functions)
+- A warning or error message when user does not fill out UserInfo.js
