@@ -98,7 +98,7 @@ const HoroscopeDaily = () => {
   return (
     <>
       {horoScope.description ? (
-        <div className="container">
+        <div className="container has-text-centered">
           <h1 className="title is-2 has-text-centered has-text-black">
             Your reading for {day}
           </h1>
