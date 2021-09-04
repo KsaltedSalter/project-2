@@ -56,8 +56,9 @@ const HoroscopeCard = () => {
     case 'pisces':
       backgroundhoroImage = pisces
       break
+
     default:
-      console.log('nothing')
+      console.log("nothing");
   }
   //page will include
   // horoscope stats
@@ -65,7 +66,9 @@ const HoroscopeCard = () => {
   // 2nd API data = best thing to do because of (stats data search)
 
   //const sign = "cancer";
-  let day = 'today'
+
+  let day = "today";
+
 
   React.useEffect(() => {
     const json = localStorage.getItem('userInfo')

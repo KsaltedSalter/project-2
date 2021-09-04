@@ -3,14 +3,14 @@ import { Link } from "react-router-dom";
 
 const Navbar = ({ isAuthenticated }) => {
   return (
-    <nav className="navbar is-dark">
+    <nav className="navbar is-link">
       <div className="container">
         <div className="navbar-brand">
           <Link to="/" className="navbar-item">
             Home
           </Link>
           <Link to="/all" className="navbar-item">
-            All Signs
+            Star Signs
           </Link>
         </div>
       </div>
