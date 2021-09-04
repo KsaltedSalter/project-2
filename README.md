@@ -2,15 +2,15 @@
 
 ## Explanations of the technologies used:
 
-bulma for styling (sass)
-axios to access News API
-aztro-js to access horoscope API (API wrapper)
-React
-Horoscope API
-https://aztro.readthedocs.io/en/latest/
-https://github.com/sameerkumar18/aztro
-News API
-https://rapidapi.com/contextualwebsearch/api/web-search/details
+- bulma for styling (sass)
+- axios to access News API
+- aztro-js to access horoscope API (API wrapper)
+- React
+- Horoscope API
+- https://aztro.readthedocs.io/en/latest/
+- https://github.com/sameerkumar18/aztro
+- News API
+- https://rapidapi.com/contextualwebsearch/api/web-search/details
 
 ---
 
@@ -33,10 +33,14 @@ Stored:
 
 ## Installation instructions for any dependencies:
 
-All in terminal:
-bulma - yarn add bulma
-axios - yarn add axios
-aztro-js - yarn add aztro-js
+- create an account on rapidapi.com to get api key for the web search
+
+All in terminal when cd is project-2-api:
+
+- yarn install
+- bulma - yarn add bulma
+- axios - yarn add axios
+- aztro-js - yarn add aztro-js
 
 ---
 
