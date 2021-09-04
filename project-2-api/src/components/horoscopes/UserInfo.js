@@ -84,7 +84,7 @@ const UserInfo = () => {
             </div>
             <div className="field">
               <input
-                className="button is-fullwidth is-link"
+                className="button is-fullwidth is-link is-rounded"
                 type="submit"
                 value="Discover your personalised horoscope"
               />

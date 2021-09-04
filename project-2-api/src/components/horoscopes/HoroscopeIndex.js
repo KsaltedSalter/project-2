@@ -32,7 +32,7 @@ const HoroscopeIndex = () => {
               <img className="has-text-centered" src={aries} alt="aries logo" />
               <div>
                 <input
-                  className="button is-link"
+                  className="button is-link is-rounded"
                   type="submit"
                   value="aries"
                   onClick={handleClick}
@@ -44,7 +44,7 @@ const HoroscopeIndex = () => {
               <img src={gemini} alt="gemini logo" />
               <div>
                 <input
-                  className="button is-link"
+                  className="button is-link is-rounded"
                   type="submit"
                   value="gemini"
                   onClick={handleClick}
@@ -56,7 +56,7 @@ const HoroscopeIndex = () => {
               <img src={capricorn} alt="capricorn logo" />
               <div>
                 <input
-                  className="button is-link"
+                  className="button is-link is-rounded"
                   type="submit"
                   value="capricorn"
                   onClick={handleClick}
@@ -70,7 +70,7 @@ const HoroscopeIndex = () => {
               <img src={taurus} alt="taurus logo" />
               <div>
                 <input
-                  className="button is-link"
+                  className="button is-link is-rounded"
                   type="submit"
                   value="taurus"
                   onClick={handleClick}
@@ -82,7 +82,7 @@ const HoroscopeIndex = () => {
               <img src={leo} alt="leo logo" />
               <div>
                 <input
-                  className="button is-link"
+                  className="button is-link is-rounded"
                   type="submit"
                   value="leo"
                   onClick={handleClick}
@@ -94,7 +94,7 @@ const HoroscopeIndex = () => {
               <img src={libra} alt="libra logo" />
               <div>
                 <input
-                  className="button is-link"
+                  className="button is-link is-rounded"
                   type="submit"
                   value="libra"
                   onClick={handleClick}
@@ -108,7 +108,7 @@ const HoroscopeIndex = () => {
               <img src={scorpio} alt="scorpio logo" />
               <div>
                 <input
-                  className="button is-link"
+                  className="button is-link is-rounded"
                   type="submit"
                   value="scorpio"
                   onClick={handleClick}
@@ -120,7 +120,7 @@ const HoroscopeIndex = () => {
               <img src={cancer} alt="cancer logo" />
               <div>
                 <input
-                  className="button is-link"
+                  className="button is-link is-rounded"
                   type="submit"
                   value="cancer"
                   onClick={handleClick}
@@ -132,7 +132,7 @@ const HoroscopeIndex = () => {
               <img src={virgo} alt="virgo logo" />
               <div>
                 <input
-                  className="button is-link"
+                  className="button is-link is-rounded"
                   type="submit"
                   value="virgo"
                   onClick={handleClick}
@@ -146,7 +146,7 @@ const HoroscopeIndex = () => {
               <img src={aquarius} alt="aquarius logo" />
               <div>
                 <input
-                  className="button is-link"
+                  className="button is-link is-rounded"
                   type="submit"
                   value="aquarius"
                   onClick={handleClick}
@@ -158,7 +158,7 @@ const HoroscopeIndex = () => {
               <img src={sagittarius} alt="sagittarius logo" />
               <div>
                 <input
-                  className="button is-link"
+                  className="button is-link is-rounded"
                   type="submit"
                   value="sagittarius"
                   onClick={handleClick}
@@ -170,7 +170,7 @@ const HoroscopeIndex = () => {
               <img src={pisces} alt="pisces logo" />
               <div>
                 <input
-                  className="button is-link"
+                  className="button is-link is-rounded"
                   type="submit"
                   value="pisces"
                   onClick={handleClick}
