@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import aries from "../../img/aries.png";
 import taurus from "../../img/taurus.png";
@@ -103,16 +103,19 @@ const HoroscopeCard = () => {
     }
 
     request(options, callback);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [info]);
 
   return (
     <>
       {horoscope.description ? (
-        <div className="container">
+        <div className="container has-text-centered">
           <h1 className="title is-2 has-text-centered has-text-black">
             Hi {info.name}! This is your personalised reading for {day}
           </h1>
-          <img src={backgroundhoroImage} alt={backgroundhoroImage} />
+          <figure className="has-text-centered">
+            <img src={backgroundhoroImage} alt={backgroundhoroImage} />
+          </figure>
           <p className="subtitle is-4 is-italic mt-2">
             {horoscope.description}
           </p>

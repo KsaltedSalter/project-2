@@ -93,12 +93,13 @@ const HoroscopeDaily = () => {
     }
 
     request(options, callback);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [info]);
 
   return (
     <>
       {horoScope.description ? (
-        <div className="container">
+        <div className="container has-text-centered">
           <h1 className="title is-2 has-text-centered has-text-black">
             Your reading for {day}
           </h1>
