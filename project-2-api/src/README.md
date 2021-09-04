@@ -17,7 +17,7 @@ https://rapidapi.com/contextualwebsearch/api/web-search/details
 ## General approach:
 
 Already had an API to use (horoscope) discussed how we could use it with added feature of a second API
-Set up git repo
+Set up git repo, notified each other of when pushes were made
 Built the basic structure together using <p></p> to return hard coded information on pages to check if they worked using live code share
 Divided the work and what components we would work on. In class time disscussed what was done and what needed to be done
 When a problem occured - shared it - solved it
@@ -51,7 +51,9 @@ Image attached (Wireframe.jpg)
 - Main struggle was calling the APIs to the page (Note/kim - i noticed that i wasn't reading the documentation properly/had difficulty interpretating it)
 - Took a while to figure out how to store data to local storage
 - Styling in general was quite tricky with multiple elements (HoroscopeIndex.js)
-- News API - because we used the documentation to pull the data over it kept sending out multipe requests and we were unsure on how to rearange it so that it would only make one request
+- News API - because we used the documentation to pull the data over it kept sending out multipe requests and we were unsure on how to rearange it so that it would only make one request. Wrapped it in a useEffect to sole
+- Accessing and presenting the data from the news API
+- Finding a usable API for new searches
 
 ---
 
@@ -60,3 +62,4 @@ Image attached (Wireframe.jpg)
 - Horoscope API had links for yesterday and tomorrow readings
 - Make code more DRY (HoroscopeDaily.js and HoroscopeCard.js basically using many of the same functions)
 - A warning or error message when user does not fill out UserInfo.js
+- More calls to API to find information based on the horoscope. EG gigs in your area if location is stored. Then further API calls based on those. eg return for gigs in your area then provides artists to search for spotify / youtube etc

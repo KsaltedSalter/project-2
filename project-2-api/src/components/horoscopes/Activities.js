@@ -31,7 +31,7 @@ const Activites = () => {
     },
     headers: {
       'x-rapidapi-host': 'contextualwebsearch-websearch-v1.p.rapidapi.com',
-      'x-rapidapi-key': 'eb499342e9mshbdc31337851737ep193f5ajsn3bbb2c7e520c',
+      'x-rapidapi-key': '61001d32b2mshd5bca778459aca0p18772ajsn3cc0609d198c',
     },
   }
 
@@ -56,10 +56,10 @@ const Activites = () => {
       {NEWS[0] ? (
         <div className='container mt-4'>
           {NEWS.map((NEW) => (
-            <div className='has-text-centered'>
+            <div key={NEW.id} className='has-text-centered is-hovered'>
               <a href={NEW.url}>
                 <h1 className='title is-3'>{NEW.title}</h1>
-                <img src={NEW.image.url} alt={NEW.title} max-height='50'></img>
+                <img src={NEW.image.url} alt={NEW.title} height='50'></img>
               </a>
               <h2 className='subtitle is-4 is-italic'>{NEW.description}</h2>
               <hr />
