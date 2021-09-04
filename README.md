@@ -11,3 +11,5 @@ Two APIs:
 issues
 sharing data between components / using props. used local storage in the end
 getting hold of and presenting the data from API
+grabbing the correct data from api. when there's an object within an object it gets tricky
+finding a news api and connecting to it using method we were taught

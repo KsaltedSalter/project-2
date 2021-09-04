@@ -2,6 +2,7 @@ import React from 'react'
 
 const Activites = () => {
   const [NEWS, setNEWS] = React.useState([])
+  const [NEWSimage, setNEWSimage] = React.useState([])
   //wrap axios in button
   const axios = require('axios').default
   const json = localStorage.getItem('horoscope')
@@ -27,33 +28,48 @@ const Activites = () => {
       toPublishedDate: 'null',
     },
     headers: {
-      "x-rapidapi-host": "contextualwebsearch-websearch-v1.p.rapidapi.com",
-      "x-rapidapi-key": "1e28ca44afmsh25e937d57ed8453p1f7b12jsn376d71df4d10"
-    }
-  };
+      'x-rapidapi-host': 'contextualwebsearch-websearch-v1.p.rapidapi.com',
+      'x-rapidapi-key': 'eb499342e9mshbdc31337851737ep193f5ajsn3bbb2c7e520c',
+    },
+  }
 
   axios
     .request(options)
     .then(function (response) {
-      //console.log(response.data.value)
-
-      const newsBody = response.data.value[0]
-      console.log(newsBody.title)
-      //console.log(newsBody.image.url);
-      setNEWS(newsBody.title)
+      const newsBody = response.data.value[0] //single news piece
+      //const newsBody = response.data.value //try map through array
+      setNEWS(newsBody)
+      setNEWSimage(newsBody.image)
     })
     .catch(function (error) {
       console.error(error)
     })
+  console.log(NEWS)
+  console.log(NEWSimage)
+  console.log(NEWSimage.url)
 
   return (
     <>
-      <p>{NEWS}</p>
+      {NEWS.url ? (
+        <div>
+          {/* {NEWS.map((NEW) => (
+            <a href={NEW.url}>
+              <h1 className='title is-1'>{NEW.title}</h1>
+            </a>
+          ))} */}
+          <a href={NEWS.url}>
+            <h1 className='title is-1'>{NEWS.title}</h1>
+            <img src={NEWSimage.url} alt={NEWS.title}></img>
+          </a>
+        </div>
+      ) : (
+        <p>Loading news stories...</p>
+      )}
     </>
   )
 }
 
 export default Activites
 
-//<img src={NEWS.image.url} alt={NEWS.title}></img>
+//
 //429
