@@ -39,14 +39,12 @@ const Activites = () => {
       const newsBody = response.data.value[0] //single news piece
       //const newsBody = response.data.value //try map through array
       setNEWS(newsBody)
+      console.log(newsBody)
       setNEWSimage(newsBody.image)
     })
     .catch(function (error) {
       console.error(error)
     })
-  console.log(NEWS)
-  console.log(NEWSimage)
-  console.log(NEWSimage.url)
 
   return (
     <>
@@ -60,6 +58,7 @@ const Activites = () => {
           <a href={NEWS.url}>
             <h1 className='title is-1'>{NEWS.title}</h1>
             <img src={NEWSimage.url} alt={NEWS.title}></img>
+            <h2 className='title is-2'>{NEWS.description}</h2>
           </a>
         </div>
       ) : (
