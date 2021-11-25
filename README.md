@@ -1,5 +1,9 @@
 ## readme.md project 2 file:
 
+## Deployed App:
+
+- https://sei-horoscope.netlify.app/
+
 ## Explanations of the technologies used:
 
 - bulma for styling (sass)
