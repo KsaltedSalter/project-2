@@ -13,13 +13,13 @@ Second project on the Software Engineering course at General Assembly. A pair pr
 - [Technologies](#technologies)
 - [Setup](#setup)
 - [Dependencies](#dependencies)
-- [Group Planning](#groupplanning)
+- [Group Planning](#groupPlanning)
 - [Process](#process)
 - [Wireframe](#wireframe)
 - [Challenges](#challenges)
 - [Wins](#wins)
-- [Key Learnings](#keylearnings)
-- [Future Features](#futurefeatures)
+- [Key Learnings](#keyLearnings)
+- [Future Features](#futureFeatures)
 
 ## Technologies
 
