@@ -19,7 +19,7 @@ Second project on the Software Engineering course at General Assembly. A pair pr
 - [Challenges](#challenges)
 - [Wins](#wins)
 - [Key Learnings](#key learnings)
-- [Future](#future)
+- [Future Features](#future features)
 
 ## Technologies
 
@@ -169,7 +169,7 @@ For styling we mainly used bulma and [Smashicons](https://www.flaticon.com/autho
 - Reading documentation is important
 - The planning done in this project with how to divide the work could have been more structured. This was our first group project, so I expected there would be a great deal to learn and experience on what works best when working in a group
 
-## Future
+## Future Features
 
 - The Horoscope API had links for yesterday and tomorrow readings. So to expand the site, it would be good to use those aspects of the API.
 - Making the code more DRY. I noticed that the HoroscopeDaily.js and HoroscopeCard.js pages were basically using many of the same functions and learning to condense the coding would be a good skill to practise.
